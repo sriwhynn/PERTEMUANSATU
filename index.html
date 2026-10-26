@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LKPD Sosiologi XI – Diferensiasi Sosial (Pertemuan 1)</title>
+<style>
+:root{--bg:#f5f3ee;--card:#fff;--ink:#1f2933;--mute:#5f6b76;--accent:#1d5c63;--accent2:#e8f1f2;--line:#d9d6cc;--warn:#b42318}
+@media (prefers-color-scheme:dark){:root{--bg:#14181b;--card:#1d2226;--ink:#e9eef1;--mute:#9aa7b1;--accent:#6cc4cc;--accent2:#223439;--line:#333c42;--warn:#ff8a80}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Georgia,"Times New Roman",serif}
+.wrap{max-width:820px;margin:0 auto;padding:16px 16px 60px}
+header{background:var(--accent);color:#fff;border-radius:14px;padding:22px 22px 18px;margin-bottom:16px}
+header small{opacity:.85;letter-spacing:.08em;text-transform:uppercase;font:600 12px system-ui,sans-serif}
+header h1{margin:6px 0 4px;font-size:1.6rem;line-height:1.25}
+header p{margin:0;opacity:.9;font:14px system-ui,sans-serif}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+h2{font:700 1.05rem system-ui,sans-serif;color:var(--accent);margin:0 0 10px}
+ol,ul{margin:0;padding-left:22px}
+.grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+label{display:block;font:600 13px system-ui,sans-serif;color:var(--mute);margin-bottom:4px}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:8px;padding:9px 11px}
+textarea{min-height:130px;resize:vertical;line-height:1.55}
+input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+.err{border-color:var(--warn)!important}
+table{width:100%;border-collapse:collapse;font:14px system-ui,sans-serif;margin-top:10px}
+td,th{border:1px solid var(--line);padding:6px 10px;text-align:left}
+td:last-child,th:last-child{text-align:right}
+.stim p{margin:0 0 10px}
+.q h3{margin:0 0 6px;font:700 1rem system-ui,sans-serif}
+.q .prompt{margin:0 0 10px}
+.count{font:12px system-ui,sans-serif;color:var(--mute);text-align:right;margin-top:3px}
+.bar{position:sticky;top:0;z-index:5;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;font:600 13px system-ui,sans-serif;gap:10px}
+.prog{flex:1;height:8px;background:var(--accent2);border-radius:99px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+button,.btn{font:700 15px system-ui,sans-serif;border:0;border-radius:10px;padding:13px 20px;cursor:pointer;background:var(--accent);color:#fff;text-decoration:none;display:inline-block}
+button.sec{background:var(--accent2);color:var(--accent)}
+button:disabled,.btn.off{opacity:.4;cursor:not-allowed;pointer-events:none}
+#msg{font:14px system-ui,sans-serif;margin-top:12px;min-height:20px}
+#msg.bad{color:var(--warn)}
+.steps{font:14px system-ui,sans-serif;color:var(--mute);margin-top:10px}
+#pdfDoc{display:none;position:absolute;left:0;top:0;z-index:-1;width:700px;background:#fff;color:#000;font:13px/1.55 Georgia,serif;padding:10px}
+#pdfDoc h1{font-size:17px;text-align:center;margin:0}
+#pdfDoc h2{font-size:14px;color:#000;margin:14px 0 4px}
+#pdfDoc .a{border:1px solid #888;padding:7px 9px;white-space:pre-wrap;min-height:40px;margin:4px 0 10px}
+#pdfDoc p{margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<small>SMAN 15 Bandung · Sosiologi Kelas XI · Pertemuan 1</small>
+<h1>Lembar Kerja Peserta Didik (LKPD)</h1>
+<p>Materi: Diferensiasi Sosial · Aktivitas: Detektif Diferensiasi Sosial</p>
+</header>
+
+<div class="bar"><span id="timer">90:00</span><div class="prog"><i id="prog"></i></div><span id="progTxt">0/6</span></div>
+
+<div class="card">
+<div class="grid">
+<div><label for="nama">Nama</label><input id="nama" autocomplete="name"></div>
+<div><label for="kelas">Kelas</label><input id="kelas" placeholder="mis. XI-3"></div>
+<div><label for="tgl">Tanggal</label><input id="tgl" type="date"></div>
+</div>
+</div>
+
+<div class="card">
+<h2>A. Petunjuk Pengerjaan</h2>
+<ol>
+<li>Tugas dikerjakan secara mandiri dan individual.</li>
+<li>Bacalah stimulus kasus dengan cermat sebelum menjawab pertanyaan.</li>
+<li>Jawablah seluruh pertanyaan berdasarkan pemahamanmu tentang diferensiasi sosial.</li>
+<li>Gunakan alasan yang logis dan kaitkan jawaban dengan konsep Sosiologi yang telah dipelajari.</li>
+<li>Kamu tidak perlu mencari sumber tambahan dari internet.</li>
+<li>Periksa kembali jawaban sebelum dikumpulkan.</li>
+</ol>
+<table>
+<tr><th>Kegiatan</th><th>Waktu</th></tr>
+<tr><td>Membaca petunjuk dan stimulus</td><td>15 menit</td></tr>
+<tr><td>Menganalisis kasus dan menjawab pertanyaan</td><td>60 menit</td></tr>
+<tr><td>Memeriksa dan mengumpulkan tugas</td><td>15 menit</td></tr>
+<tr><td><b>Total (2 JP)</b></td><td><b>90 menit</b></td></tr>
+</table>
+</div>
+
+<div class="card stim">
+<h2>B. Stimulus Kasus: Festival Budaya di Lingkungan Sekolah</h2>
+<p>SMA Nusantara mengadakan festival budaya yang melibatkan seluruh siswa kelas XI. Setiap kelas diminta menampilkan pertunjukan yang mencerminkan keberagaman masyarakat Indonesia. Para siswa memiliki latar belakang suku, agama, kebiasaan keluarga, dan lingkungan tempat tinggal yang berbeda.</p>
+<p>Dalam proses persiapan, kelompok kelas XI-3 mengalami beberapa persoalan. Sebagian siswa ingin menampilkan kesenian daerah tertentu karena dianggap lebih menarik dibandingkan kesenian daerah lainnya. Ada pula siswa yang menganggap bahwa teman dengan kebiasaan berbeda akan sulit diajak bekerja sama.</p>
+<p>Selain itu, beberapa siswa cenderung memilih teman yang memiliki minat dan latar belakang serupa. Akibatnya, sebagian anggota kelompok merasa kurang dilibatkan dalam pengambilan keputusan.</p>
+<p>Ketua kelas kemudian mengusulkan agar seluruh anggota diberi kesempatan menyampaikan ide. Mereka diminta mempelajari keunikan setiap kesenian, membagi tugas berdasarkan kemampuan dan minat, serta menyusun pertunjukan yang menggabungkan beberapa unsur budaya.</p>
+<p>Setelah berdiskusi, siswa mulai menyadari bahwa perbedaan latar belakang tidak selalu menjadi hambatan. Mereka dapat saling melengkapi dan menghasilkan pertunjukan yang lebih beragam ketika setiap anggota memperoleh kesempatan berpartisipasi.</p>
+</div>
+
+<h2 style="margin:18px 4px 8px">C. Pertanyaan Analisis</h2>
+<div id="qs"></div>
+
+<div class="card">
+<h2>E. Pengumpulan</h2>
+<ol class="steps" style="padding-left:20px">
+<li>Isi semua jawaban, lalu klik <b>Unduh PDF</b>.</li>
+<li>Setelah PDF terunduh, tombol <b>Kirim ke Google Drive</b> aktif. Folder Drive akan terbuka di tab baru.</li>
+<li>Di folder tersebut, klik <b>Baru → Upload file</b> (atau seret berkas PDF) untuk mengirim tugasmu.</li>
+</ol>
+<div class="actions">
+<button id="dl">⬇ Unduh PDF</button>
+<a id="send" class="btn off" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/11Ul1Hqq-urICpeONZOKXOFzvz58z0G-u?usp=sharing">📤 Kirim ke Google Drive</a>
+<button class="sec" id="reset">Hapus semua jawaban</button>
+</div>
+<div id="msg"></div>
+<p class="steps">Nama berkas: <b>Kelas_Nama_DiferensiasiSosial_P1.pdf</b>. Jawabanmu tersimpan otomatis di perangkat ini.</p>
+</div>
+</div>
+
+<div id="pdfDoc"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+// Link folder Google Drive tujuan (ubah di atribut href tombol #send bila perlu)
+var Q=[
+["1. Identifikasi Perbedaan Sosial","Sebutkan tiga bentuk perbedaan sosial yang terdapat dalam stimulus. Jelaskan bukti dari cerita yang mendukung setiap jawabanmu."],
+["2. Analisis Diferensiasi Sosial","Mengapa perbedaan latar belakang para siswa dalam kasus tersebut dapat dikategorikan sebagai diferensiasi sosial? Jelaskan dengan menggunakan konsep Sosiologi yang telah kamu pelajari."],
+["3. Analisis Permasalahan","Sebagian siswa menganggap kesenian dari daerah tertentu lebih menarik, sedangkan siswa dengan latar belakang berbeda dianggap sulit diajak bekerja sama. Menurutmu, apakah persoalan tersebut semata-mata muncul karena adanya perbedaan sosial? Analisis bagaimana stereotip atau prasangka dapat memperburuk hubungan antarsiswa."],
+["4. Evaluasi Tindakan Kelompok","Ketua kelas mengusulkan agar seluruh siswa diberi kesempatan menyampaikan ide dan terlibat dalam pembagian tugas. Menurutmu, mengapa tindakan tersebut dapat membantu mengatasi persoalan dalam kelompok? Jelaskan dua alasan yang didukung oleh konsep Sosiologi."],
+["5. Rekomendasi Solusi","Bayangkan kamu menjadi anggota kelompok tersebut. Usulkan dua tindakan konkret yang dapat dilakukan agar perbedaan latar belakang tidak menimbulkan diskriminasi dan justru memperkuat kerja sama. Jelaskan alasan mengapa setiap tindakan yang kamu usulkan dapat membantu menciptakan hubungan sosial yang lebih harmonis."],
+["D. Refleksi Singkat","Menurutmu, apa pelajaran terpenting yang dapat diambil dari kasus tersebut untuk diterapkan dalam kehidupan sehari-hari?"]
+];
+var KEY="lkpd_sosio_xi_p1", $=function(i){return document.getElementById(i)};
+var qs=$("qs");
+Q.forEach(function(q,i){
+ var d=document.createElement("div");d.className="card q";
+ d.innerHTML='<h3>'+q[0]+'</h3><p class="prompt">'+q[1]+'</p><textarea id="a'+i+'" placeholder="Tulis jawabanmu di sini..."></textarea><div class="count" id="c'+i+'">0 kata</div>';
+ qs.appendChild(d);
+});
+var F=["nama","kelas","tgl"].concat(Q.map(function(_,i){return "a"+i}));
+function save(){var o={};F.forEach(function(f){o[f]=$(f).value});try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+function words(s){s=s.trim();return s?s.split(/\s+/).length:0}
+function update(){
+ var done=0;
+ Q.forEach(function(_,i){var v=$("a"+i).value;$("c"+i).textContent=words(v)+" kata";if(v.trim())done++});
+ $("prog").style.width=(done/Q.length*100)+"%";$("progTxt").textContent=done+"/"+Q.length;
+}
+try{var s=JSON.parse(localStorage.getItem(KEY)||"{}");F.forEach(function(f){if(s[f])$(f).value=s[f]})}catch(e){}
+if(!$("tgl").value)$("tgl").value=new Date().toISOString().slice(0,10);
+F.forEach(function(f){$(f).addEventListener("input",function(){this.classList.remove("err");save();update()})});
+update();
+
+// Timer 90 menit (hanya penanda, tidak mengunci tugas)
+var left=90*60;
+setInterval(function(){if(left>0)left--;var m=Math.floor(left/60),s=left%60;$("timer").textContent="⏱ "+m+":"+(s<10?"0":"")+s},1000);
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function msg(t,bad){$("msg").textContent=t;$("msg").className=bad?"bad":""}
+function fileName(){
+ var c=$("kelas").value.trim().replace(/\s+/g,""),n=$("nama").value.trim().replace(/\s+/g,"");
+ return (c+"_"+n+"_DiferensiasiSosial_P1").replace(/[^\w\-]/g,"");
+}
+function build(){
+ var h='<h1>LEMBAR TUGAS PEMBELAJARAN DARING<br>SOSIOLOGI KELAS XI – PERTEMUAN 1</h1><p style="text-align:center">SMAN 15 BANDUNG · Materi: Diferensiasi Sosial · Aktivitas: Detektif Diferensiasi Sosial</p><hr>'+
+ '<p><b>Nama:</b> '+esc($("nama").value)+'<br><b>Kelas:</b> '+esc($("kelas").value)+'<br><b>Tanggal:</b> '+esc($("tgl").value)+'</p>';
+ Q.forEach(function(q,i){h+='<div style="page-break-inside:avoid"><h2>'+esc(q[0])+'</h2><p>'+esc(q[1])+'</p><div class="a">'+esc($("a"+i).value)+'</div></div>'});
+ $("pdfDoc").innerHTML=h;
+}
+$("dl").onclick=function(){
+ var bad=false;
+ F.forEach(function(f){var e=$(f);if(!e.value.trim()){e.classList.add("err");if(!bad)e.scrollIntoView({behavior:"smooth",block:"center"});bad=true}});
+ if(bad){msg("Lengkapi identitas dan semua jawaban terlebih dahulu (kolom bertanda merah).",true);return}
+ if(typeof html2pdf==="undefined"){msg("Pustaka PDF belum termuat. Periksa koneksi internet lalu muat ulang halaman.",true);return}
+ msg("Membuat PDF...");$("dl").disabled=true;build();
+ var el=$("pdfDoc"),y=window.scrollY;
+ el.style.display="block";window.scrollTo(0,0);
+ function done(){el.style.display="none";window.scrollTo(0,y);$("dl").disabled=false}
+ setTimeout(function(){
+  html2pdf().set({margin:12,filename:fileName()+".pdf",image:{type:"jpeg",quality:.95},html2canvas:{scale:2,backgroundColor:"#fff",scrollX:0,scrollY:0,windowWidth:760},jsPDF:{unit:"mm",format:"a4",orientation:"portrait"},pagebreak:{mode:["css","legacy"]}})
+  .from(el).save().then(function(){
+   done();$("send").classList.remove("off");
+   msg("✅ PDF terunduh ("+fileName()+".pdf). Buka dulu PDF-nya untuk memastikan jawabanmu muncul, lalu klik “Kirim ke Google Drive” dan upload berkas tersebut.");
+  }).catch(function(){done();msg("Gagal membuat PDF. Coba lagi.",true)});
+ },150);
+};
+$("reset").onclick=function(){
+ if(!confirm("Hapus semua jawaban? Tindakan ini tidak bisa dibatalkan."))return;
+ F.forEach(function(f){if(f!=="tgl")$(f).value=""});
+ try{localStorage.removeItem(KEY)}catch(e){}
+ $("send").classList.add("off");update();msg("");
+};
+</script>
+</body>
+</html>
